@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  api-auth:
+    build: ./api-auth
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+
+  api-account:
+    build: ./api-account
+    ports:
+      - "4001:4001"
+    depends_on:
+      - mongodb
+      - api-auth
+
+  api-transaction:
+    build: ./api-transaction
+    ports:
+      - "4002:4002"
+    depends_on:
+      - mongodb
+      - api-auth
+      - api-account
+
+  mongodb:
+    build: ./mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+
+volumes:
+  mongodb-data:
