@@ -19,7 +19,7 @@ app.post('/transactions', async (req, res) => {
   });
   
   
-app.listen(4002, () => {
+app.listen(2222, () => {
   console.log('api-transaction service running on port 4002');
 });
 
