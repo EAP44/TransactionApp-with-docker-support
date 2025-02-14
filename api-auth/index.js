@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user.model');
 
+const PORT = 4000;
+
 const app = express();
 app.use(express.json());
 
@@ -21,6 +23,6 @@ app.post('/login', async (req, res) => {
   });
 
 
-app.listen(4000, () => {
-  console.log('api-auth service running on port 4000');
+app.listen(PORT, () => {
+  console.log(`api-auth service running on port {PORT}`);
 });
