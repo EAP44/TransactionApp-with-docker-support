@@ -10,7 +10,7 @@ services:
   api-account:
     build: ./api-account
     ports:
-      - "4001:4001"
+      - "4004:4004"
     depends_on:
       - mongodb
       - api-auth
