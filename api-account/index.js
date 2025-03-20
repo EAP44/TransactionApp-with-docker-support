@@ -18,6 +18,6 @@ app.get('/account', async (req, res) => {
 });
   
 
-app.listen(4001, () => {
-  console.log('api-account service running on port 4001');
+app.listen(4004, () => {
+  console.log('api-account service running on port 4004');
 });
